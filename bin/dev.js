@@ -11,7 +11,7 @@ const port = packageConfig.port || 3000;
 const options = {
   port,
   hot: true,
-  open: true,
+  open: false,
   historyApiFallback: true,
   proxy: packageConfig.proxy,
 };
