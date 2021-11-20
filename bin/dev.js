@@ -8,7 +8,7 @@ const projectRoot = process.cwd();
 const packageConfig = require(path.join(projectRoot, './package.json'));
 const port = packageConfig.port || 3000;
 
-const options = {
+const devServerOptions = {
   port,
   hot: true,
   open: false,
@@ -18,10 +18,11 @@ const options = {
 
 const compiler = webpack(devConfig);
 
-const server = new WebpackDevServer(compiler, options);
+const server = new WebpackDevServer(devServerOptions, compiler);
 
-server.listen(port, 'localhost', (err) => {
-  if (err) {
-    console.log(err);
-  }
-});
+const runServer = async () => {
+  console.log('Starting server...');
+  await server.start();
+};
+
+runServer();

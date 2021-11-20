@@ -1,1 +1,5 @@
-export eslintConfig from './eslint/eslint.config';
+const eslintConfig = require('./eslint/eslint.config');
+
+module.exports = {
+  eslintConfig,
+}
