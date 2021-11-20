@@ -1561,11 +1561,6 @@ ansi-styles@^6.0.0:
   resolved "https://registry.nlark.com/ansi-styles/download/ansi-styles-6.1.0.tgz#87313c102b8118abd57371afab34618bf7350ed3"
   integrity sha1-hzE8ECuBGKvVc3GvqzRhi/c1DtM=
 
-antd-dayjs-webpack-plugin@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npm.taobao.org/antd-dayjs-webpack-plugin/download/antd-dayjs-webpack-plugin-1.0.6.tgz#7d98bcb51422248b8cd4a32e352a0425a3bffa3a"
-  integrity sha1-fZi8tRQiJIuM1KMuNSoEJaO/+jo=
-
 anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
@@ -2323,11 +2318,6 @@ data-uri-to-buffer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/data-uri-to-buffer/download/data-uri-to-buffer-4.0.0.tgz?cache=0&sync_timestamp=1632737517013&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fdata-uri-to-buffer%2Fdownload%2Fdata-uri-to-buffer-4.0.0.tgz#b5db46aea50f6176428ac05b73be39a57701a64b"
   integrity sha1-tdtGrqUPYXZCisBbc745pXcBpks=
-
-dayjs@^1.10.7:
-  version "1.10.7"
-  resolved "https://registry.nlark.com/dayjs/download/dayjs-1.10.7.tgz?cache=0&sync_timestamp=1631266519235&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdayjs%2Fdownload%2Fdayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
-  integrity sha1-LPX5Gt0oEWdIRAhmoKHSbzps5Gg=
 
 debug@2.6.9, debug@^2.6.9:
   version "2.6.9"
