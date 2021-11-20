@@ -4,7 +4,6 @@ module.exports = {
     'airbnb/hooks',
   ],
   rules: {
-    'import/no-dynamic-require': ['error', 'never'],
     'no-async-promise-executor': 'error',
     'react/prop-types': 'warn',
     'require-atomic-updates': 'warn',
