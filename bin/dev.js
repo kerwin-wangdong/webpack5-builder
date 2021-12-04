@@ -5,7 +5,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const devConfig = require('../lib/webpack.dev');
 
 const projectRoot = process.cwd();
-const packageConfig = require(path.join(projectRoot, './package.json'));
+const packageConfig = require(path.join(projectRoot, 'package.json'));
 const port = packageConfig.port || 3000;
 
 const devServerOptions = {
