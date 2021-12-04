@@ -1,4 +1,12 @@
 module.exports = {
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    sourceType: "module",
+    allowImportExportEverywhere: false,
+    ecmaFeatures: {
+      globalReturn: false,
+    },
+  },
   env: {
     browser: true,
     node: true,

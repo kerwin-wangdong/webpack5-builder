@@ -1,16 +1,36 @@
 module.exports = {
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    sourceType: "module",
+    allowImportExportEverywhere: false,
+    ecmaFeatures: {
+      globalReturn: false,
+    },
+  },
+  env: {
+    browser: true,
+    node: true,
+    es2020: true,
+  },
   extends: [
     'airbnb',
     'airbnb/hooks',
   ],
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.join(__dirname, '../lib/webpack.base.js')
+      }
+    }
+  },
   rules: {
-    'import/no-dynamic-require': ['error', 'never'],
     'no-async-promise-executor': 'error',
     'react/prop-types': 'warn',
     'require-atomic-updates': 'warn',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-no-target-blank': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/interactive-supports-focus': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/mouse-events-have-key-events': 'off',
