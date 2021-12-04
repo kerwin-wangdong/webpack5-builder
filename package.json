@@ -1,6 +1,6 @@
 {
   "name": "wd-webpack5-builder",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Simplify webpack configs",
   "main": "index.js",
   "scripts": {
