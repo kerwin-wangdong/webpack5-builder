@@ -21,7 +21,6 @@ const compiler = webpack(devConfig);
 const server = new WebpackDevServer(devServerOptions, compiler);
 
 const runServer = async () => {
-  console.log('Starting server...');
   await server.start();
 };
 

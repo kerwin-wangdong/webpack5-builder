@@ -1,12 +1,4 @@
 module.exports = {
-  parser: "@babel/eslint-parser",
-  parserOptions: {
-    sourceType: "module",
-    allowImportExportEverywhere: false,
-    ecmaFeatures: {
-      globalReturn: false,
-    },
-  },
   env: {
     browser: true,
     node: true,
@@ -17,13 +9,17 @@ module.exports = {
     'airbnb/hooks',
   ],
   settings: {
+    node: {
+      extensions: ['.js', '.jsx'],
+    },
     'import/resolver': {
       webpack: {
-        config: path.join(__dirname, '../lib/webpack.base.js')
-      }
-    }
+        config: '../lib/webpack.base.js',
+      },
+    },
   },
   rules: {
+    'import/no-dynamic-require': 'off',
     'no-async-promise-executor': 'error',
     'react/prop-types': 'warn',
     'require-atomic-updates': 'warn',
