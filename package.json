@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write .",
+    "prettier": "prettier --write .",
     "lint": "eslint --fix . --ext .js,.jsx"
   },
   "bin": {
@@ -19,7 +19,10 @@
   "keywords": [
     "webpack5",
     "babel7",
-    "cli"
+    "cli",
+    "eslint",
+    "airbnb",
+    "prettier"
   ],
   "author": "",
   "license": "ISC",
@@ -72,8 +75,11 @@
     "webpack-log": "^3.0.2",
     "webpack-merge": "^5.8.0"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
+  "peerDependencies": {
+    "eslint": ">=7.28.0",
+    "prettier": ">=2.0.0",
+    "eslint-plugin-prettier": ">=4.0.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
