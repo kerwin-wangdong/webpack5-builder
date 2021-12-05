@@ -1,20 +1,26 @@
+const path = require('path');
+
 module.exports = {
   env: {
     browser: true,
     node: true,
+    commonjs: true,
+    'shared-node-browser': true,
+    es6: true,
+    es2017: true,
     es2020: true,
+    es2021: true,
   },
   extends: [
     'airbnb',
     'airbnb/hooks',
+    'eslint:recommended',
+    'plugin:react/recommended'
   ],
   settings: {
-    node: {
-      extensions: ['.js', '.jsx'],
-    },
     'import/resolver': {
       webpack: {
-        config: '../lib/webpack.base.js',
+        config: path.join(__dirname, '..', 'lib', 'webpack.base.js'),
       },
     },
   },
