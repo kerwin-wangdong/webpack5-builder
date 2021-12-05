@@ -1,6 +1,6 @@
 {
   "name": "wd-webpack5-builder",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Simplify webpack configs",
   "main": "index.js",
   "scripts": {
@@ -74,11 +74,6 @@
     "webpack-dev-server": "^4.6.0",
     "webpack-log": "^3.0.2",
     "webpack-merge": "^5.8.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=7.28.0",
-    "prettier": ">=2.0.0",
-    "eslint-plugin-prettier": ">=4.0.0"
   },
   "husky": {
     "hooks": {
