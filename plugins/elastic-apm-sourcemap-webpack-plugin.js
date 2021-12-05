@@ -21,15 +21,16 @@ class ElasticAPMSourceMapWebpackPlugin {
     this.logger.debug(`starting uploading sourcemaps with configs: ${JSON.stringify(this.config)}.`);
     const { chunks = [] } = compilation.getStats().toJson();
 
-    const promises = chunks.map((chunk) => {
-      const { files, auxiliaryFiles } = chunk;
-      const sourceFile = (files || []).find((i) => i.match(/\.js$/));
-      const sourceMap = (auxiliaryFiles || files || []).find((i) => i.match(/\.js\.map$/));
-      return { sourceFile, sourceMap };
-    })
+    const promises = chunks
+      .map((chunk) => {
+        const { files, auxiliaryFiles } = chunk;
+        const sourceFile = (files || []).find((i) => i.match(/\.js$/));
+        const sourceMap = (auxiliaryFiles || files || []).find((i) => i.match(/\.js\.map$/));
+        return { sourceFile, sourceMap };
+      })
       .map(({ sourceFile, sourceMap }) => {
         if (!sourceFile || !sourceMap) {
-        // It is impossible for Wepback to run into here.
+          // It is impossible for Wepback to run into here.
           this.logger.debug('there is no .js files to be uploaded.');
           return Promise.resolve();
         }
@@ -44,13 +45,9 @@ class ElasticAPMSourceMapWebpackPlugin {
           contentType: 'application/json',
         });
 
-        const headers = this.config.secret
-          ? { Authorization: `Bearer ${this.config.secret}` }
-          : undefined;
+        const headers = this.config.secret ? { Authorization: `Bearer ${this.config.secret}` } : undefined;
 
-        this.logger.debug(
-          `uploading ${sourceMap} to Elastic APM with bundle_filepath: ${bundleFilePath}.`,
-        );
+        this.logger.debug(`uploading ${sourceMap} to Elastic APM with bundle_filepath: ${bundleFilePath}.`);
 
         return fetch(this.config.serverURL, {
           method: 'POST',
