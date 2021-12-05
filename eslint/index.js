@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   extends: ['airbnb', 'airbnb/hooks', 'plugin:prettier/recommended'],
   env: {
@@ -14,6 +16,13 @@ module.exports = {
     // 你的全局变量（设置为 false 表示它不允许被重新赋值）
     //
     // myGlobal: false
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.join(__dirname, '..', 'lib', 'webpack.base.js'),
+      },
+    },
   },
   rules: {
     // 自定义你的规则
